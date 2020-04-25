@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use App\Entity\Connection_db;
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -31,6 +33,18 @@ class Producto
      */
     private $Existencia;
 
+
+	public function __construct(){//
+			$this->con = new Connection();
+		}
+
+	public function view_all(){
+		$sql = "SELECT * FROM Produnto";
+		$datos = $this->con->consultaRetorno_row($sql);
+		return $datos;
+		}
+		
+	
     public function getId(): ?int
     {
         return $this->id;
