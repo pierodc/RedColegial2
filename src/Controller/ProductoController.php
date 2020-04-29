@@ -80,10 +80,27 @@ class ProductoController extends AbstractController
 	 */
     public function show($slug = '')
     {
+		
+		$db = new Connection_db;
+		
+		
+		$sql = "SELECT * FROM Producto WHERE Nombre LIKE '%". $slug."%'";
+		$Productos = $db->conn->query($sql); // Simple, but has several drawbacks
+
+		
+		return $this->render('producto/index2.html.twig', [
+            'controller_name' => 'ProductoController',
+			'Productos' => $Productos,
+        ]);
+		
+		
+		
+		/*
         return $this->render('producto/detalle.html.twig', [
             'controller_name' => 'ProductoController',
 			'slug' => $slug,
         ]);
+		*/
 		
     }
 	
