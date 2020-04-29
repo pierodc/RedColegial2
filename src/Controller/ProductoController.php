@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Connection_db;
+//use App\Entity\Connection_db;
 use App\Entity\Producto;
 use App\Form\ProductoType;
 
@@ -24,7 +24,7 @@ class ProductoController extends AbstractController
     public function index()
     {
 		$Producto = new Producto;
-		$db = new Connection_db;
+		//$db = new Connection_db;
 		//$Listado = $Producto->view_all();
 		
 	

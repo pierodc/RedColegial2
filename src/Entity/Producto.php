@@ -35,7 +35,7 @@ class Producto
 
 
 	public function __construct(){//
-			$this->con = new Connection();
+			//$this->con = new Connection();
 		}
 
 	public function view_all(){
