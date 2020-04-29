@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-//use App\Entity\Connection_db;
+use App\Entity\Connection_db;
 use App\Entity\Producto;
 use App\Form\ProductoType;
 
@@ -14,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 //use Doctrine\DBAL\Driver\Connection;
+//use Doctrine\DBAL\DriverManager;
 
 
 class ProductoController extends AbstractController
@@ -23,28 +24,14 @@ class ProductoController extends AbstractController
      */
     public function index()
     {
-		$Producto = new Producto;
-		//$db = new Connection_db;
-		//$Listado = $Producto->view_all();
+		//$Producto = new Producto;
+		$db = new Connection_db;
 		
-	
-		//$con = new Connection();
-		/*
-			*/
-		$connectionParams = array(
-			'dbname' => 'redcolegial_RedColegial',
-			'user' => 'redcolegial_RedColegial',
-			'password' => 'piero1971',
-			'host' => 'localhost',
-			'driver' => 'pdo_mysql',
-		);
-		$db = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
+		
+		$sql = "SELECT * FROM Producto";
+		$Productos = $db->conn->query($sql); // Simple, but has several drawbacks
 
-		$Productos = $db->fetchAll('SELECT * FROM Producto');
-	
-	
-		//$Productos = $db->consultaRetorno('SELECT * FROM Producto');
-	
+		
 		return $this->render('producto/index2.html.twig', [
             'controller_name' => 'ProductoController',
 			'Productos' => $Productos,

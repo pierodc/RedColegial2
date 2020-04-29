@@ -11,22 +11,23 @@ use Doctrine\DBAL\Driver\Connection;
 class Connection_db{
 	private $sql;
 	
-	/*
-	private $connectionParams = array(
-		'dbname' => 'redcolegial_RedColegial',
-		'user' => 'redcolegial_RedColegial',
-		'password' => 'piero1971',
-		'host' => 'localhost',
-		'driver' => 'pdo_mysql',
-	);
-	*/
-	
-	
+		
 	
 	
 	
 	function __construct(){
-	/*
+	
+		$connectionParams = array(
+			'dbname' => 'redcolegial_RedColegial',
+			'user' => 'redcolegial_RedColegial',
+			'password' => 'piero1971',
+			'host' => 'localhost',
+			'driver' => 'pdo_mysql',
+		);
+		
+		$this->conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams);
+		
+		/*
 		$connectionParams = array(
 			'dbname' => 'redcolegial_RedColegial',
 			'user' => 'redcolegial_RedColegial',
