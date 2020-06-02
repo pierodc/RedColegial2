@@ -2,7 +2,8 @@
 
 namespace App\Entity;
 
-use Doctrine\DBAL\Driver\Connection;
+//use Doctrine\DBAL\Driver\Connection;
+use Doctrine\DBAL\DriverManager;
 
 //use Doctrine\ORM\Mapping as ORM;
 
@@ -12,8 +13,6 @@ class Connection_db{
 	private $sql;
 	
 		
-	
-	
 	
 	function __construct(){
 	
