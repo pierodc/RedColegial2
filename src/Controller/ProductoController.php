@@ -30,10 +30,12 @@ class ProductoController extends AbstractController
 		
 		$sql = "SELECT * FROM Producto";
 		$Productos = $db->conn->query($sql); // Simple, but has several drawbacks
-
 		
-		return $this->render('producto/index2.html.twig', [
+		$colegio_name = $_SERVER['HTTP_HOST'];
+		
+		return $this->render('producto/index.html.twig', [
             'controller_name' => 'ProductoController',
+			'colegio_name' => $colegio_name,
 			'Productos' => $Productos,
         ]);
     }
