@@ -1,0 +1,403 @@
+
+.pos-header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+.grid-header {
+	display: grid;
+	justify-content: space-between;
+	align-content: center;
+	grid-template-columns: auto auto;
+	gap: 10px;
+	align-items: center;
+	padding: 10px 20px;
+	/*background: #becaff;*/
+}
+
+.contain-header {
+	box-shadow: 1px 0 10px rgba(0,0,0,.1);
+	position: relative;
+	z-index: 1;
+}
+
+.background-total-header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-image: url(../img/tablero-pizzara-green.jpg);
+	z-index: -1;
+	opacity: 0.7;
+}
+
+.grid-left-header {
+	display: grid;
+	justify-content: flex-start;
+	align-content: center;
+	grid-auto-flow: column;
+	gap: 10px;
+}
+
+.grid-right-header {
+	display: grid;
+	justify-content: flex-start;
+	align-content: center;
+	grid-auto-flow: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.logo {
+	max-width: 110px;
+	height: auto;
+}
+
+.grid-row10-h {
+	display: grid;
+	gap: 10px;
+}
+
+.grid-row5-h {
+	display: grid;
+	gap: 5px;
+}
+
+.h1-header {
+	font-family: "Times New Roman", Times, serif;
+	font-weight: 700;
+	font-size: 30px;
+	color: #000000;
+	margin: 0;
+	padding: 0;
+	line-height: 100%;
+}
+
+.h2-header {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 19px;
+	color: #000000;
+	margin: 0;
+	padding: 0;
+	line-height: 100%;
+}
+
+.h3-header {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: #000000;
+	margin: 0;
+	padding: 0;
+	line-height: 100%;
+}
+
+.h4-header {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	color: #000000;
+	margin: 0;
+	padding: 0;
+	line-height: 100%;
+}
+
+.border-h4-h{
+	margin-top: 3px;
+	padding: 2px;
+	border-top: 1px solid #9c909082;
+	border-bottom: 1px solid #9c909082;
+	width: max-content;
+}
+
+.align-center-h {
+	align-content: center;
+}
+
+.justify-start-h {
+	justify-content: flex-start;
+}
+
+.btn-h{
+	padding: 10px 20px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	color: #ffffff;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border: 1px solid transparent;
+	background: transparent;
+	background: #3f5ad5;
+}
+
+.btn-h:hover {
+	background: #2e45af;
+}
+
+
+.grid-btns-h {
+	display: grid;
+	gap: 10px;
+}
+
+.grid-nav {
+	padding: 10px 20px;
+	display: flex;
+	justify-content: center;
+	border-top: 1px solid #00000026;
+}
+
+.nav-h {
+	display: grid;
+	gap: 20px;
+	grid-auto-flow: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-h >* {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 15px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.nav-h >*:hover {
+	color: #000000b0;
+	text-decoration: underline;
+}
+
+
+.relative-h{
+	position: relative;
+}
+
+.contain-art {
+	position: relative;
+}
+
+
+
+
+
+/*MENU HAMB*/
+
+.menu-hamb {
+	width: 50px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background-image: url(../img/menu-hamb.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border-bottom: unset;
+}
+
+.dropdown-hamb {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.dropdown-content {
+	display: none;
+	position: fixed;
+	background-color: #f1f1f1;
+	min-width: 260px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	right: 0;
+	bottom: 0;
+	top: 0;
+}
+
+.dropdown-content > a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-size: 16px;
+}
+
+.dropdown-content > a:hover {
+	font-weight: 700;
+}
+
+.dropdown a:hover {color: #ddd;}
+
+.show {display: block;}
+
+
+/*MENU HAMB*/
+
+
+
+/*DROP BTNS TOP*/
+
+.menu-drop-btn-top {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border-bottom: unset;
+	position: relative;
+	z-index: 1;
+	background-image: url(../i/user.png);
+}
+
+.dropdown-btn-top {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.dropdown-content-btn-top {
+	display: none;
+	position: absolute;
+	right: 0;
+	background: #f1f1f1;
+	min-width: 200px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	right: 0;
+	top: 60px;
+	gap: 10px;
+	padding: 20px;
+}
+
+.dropdown-content-btn-top > a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-size: 16px;
+}
+
+.dropdown-content-btn-top > a:hover {
+	font-weight: 700;
+}
+
+.dropdown-btn-top a:hover {color: #ddd;}
+
+.show-btn-top {display: grid;}
+
+
+.icon-user {
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background-image: url(../i/user.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	position: relative;
+	z-index: -1;
+}
+
+
+/*DROP BTNS TOP*/
+
+
+.maxwh {
+	max-width: max-content;
+}
+
+.text-centerh {
+	text-align: center;
+}
+
+.font-400h {
+	font-weight: 400;
+}
+
+
+/*++++++++++++++++ MEDIA QUERY ++++++++++++++++*/
+
+@media (min-width: 1101px) {
+	.none-min1100h {
+		display: none;
+	}
+}
+
+@media (max-width: 1100px) {
+	.btn-h {
+		padding: 10px 13px;
+		font-family: 'Poppins', sans-serif;
+		font-weight: 700;
+		font-size: 11px;
+	}
+	
+	.none-1100h {
+		display: none;
+	}
+	
+	.grid-header {
+		grid-template-columns: auto auto;
+	}
+}
+
+
+@media (max-width: 960px) {
+	.none-960 {
+		display: none;
+	}
+}
+
+.contain-art {
+	padding-top: 10px;
+}
+
+@media (min-width: 769px) {
+	.none-min768 {
+		display: none;
+	}
+}
+
+
+@media (max-width: 768px) {
+	.none768 {
+		display: none;
+	}
+
+}
+
+
+
+@media (max-width: 550px) {
+	.h1-header {
+		font-size: 25px;
+	}
+	
+	.none550 {
+		display: none;
+	}
+}
+
+
+@media (max-width: 370px) {
+	.h1-header {
+		font-size: 20px;
+	}
+	
+}
